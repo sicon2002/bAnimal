@@ -13,18 +13,20 @@ import {
   Left,
   Right,
   Body,
-  Badge
+  Badge,
+  Item,
+  Input
 } from "native-base";
 
 import styles from "./styles";
 
-class MyIndex extends Component {
+class MyTask extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab1: true,
+      tab1: false,
       tab2: false,
-      tab3: false,
+      tab3: true,
       tab4: false
     };
   }
@@ -81,17 +83,33 @@ class MyIndex extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>首页</Title>
+            <Title>创建活动</Title>
           </Body>
           <Right />
 
         </Header>
 
         <Content padder>
-          <Text>
-            index...
-          </Text>
-
+          <Item>
+            <Icon active name="alarm" style={{ color: "#387ef5" }} />
+            <Input placeholder="2018/3/21" />
+          </Item>
+          <Item>
+            <Icon active name="paper" style={{ color: "#387ef5" }} />
+            <Input placeholder="上海" />
+          </Item>
+          <Item>
+            <Icon active name="shuffle" />
+            <Input placeholder="请选择河流" />
+          </Item>
+          <Item>
+            <Icon active name="flag" />
+            <Input placeholder="请输入断面" />
+          </Item>
+          <Item>
+            <Icon active name="person" />
+            <Input placeholder="请选择团队" />
+          </Item>
         </Content>
 
         <Footer>
@@ -106,12 +124,10 @@ class MyIndex extends Component {
               <Icon active={this.state.tab1} name="apps" />
               <Text>首页</Text>
             </Button>
-
             <Button active={this.state.tab2} onPress={() => this.toggleTab2()}>
               <Icon active={this.state.tab2} name="camera" />
               <Text>地图</Text>
             </Button>
-
             <Button
               active={this.state.tab3}
               onPress={() => this.toggleTab3()}
@@ -124,12 +140,10 @@ class MyIndex extends Component {
               <Icon active={this.state.tab3} name="compass" />
               <Text>任务</Text>
             </Button>
-
             <Button active={this.state.tab4} onPress={() => this.toggleTab4()}>
               <Icon active={this.state.tab4} name="contact" />
               <Text>团队</Text>
             </Button>
-
           </FooterTab>
         </Footer>
       </Container>
@@ -137,4 +151,4 @@ class MyIndex extends Component {
   }
 }
 
-export default MyIndex;
+export default MyTask;

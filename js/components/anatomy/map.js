@@ -18,12 +18,12 @@ import {
 
 import styles from "./styles";
 
-class MyIndex extends Component {
+class MyMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab1: true,
-      tab2: false,
+      tab1: false,
+      tab2: true,
       tab3: false,
       tab4: false
     };
@@ -81,7 +81,7 @@ class MyIndex extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>首页</Title>
+            <Title>水质地图</Title>
           </Body>
           <Right />
 
@@ -89,7 +89,7 @@ class MyIndex extends Component {
 
         <Content padder>
           <Text>
-            index...
+            map...
           </Text>
 
         </Content>
@@ -106,12 +106,10 @@ class MyIndex extends Component {
               <Icon active={this.state.tab1} name="apps" />
               <Text>首页</Text>
             </Button>
-
             <Button active={this.state.tab2} onPress={() => this.toggleTab2()}>
               <Icon active={this.state.tab2} name="camera" />
               <Text>地图</Text>
             </Button>
-
             <Button
               active={this.state.tab3}
               onPress={() => this.toggleTab3()}
@@ -124,12 +122,10 @@ class MyIndex extends Component {
               <Icon active={this.state.tab3} name="compass" />
               <Text>任务</Text>
             </Button>
-
             <Button active={this.state.tab4} onPress={() => this.toggleTab4()}>
               <Icon active={this.state.tab4} name="contact" />
               <Text>团队</Text>
             </Button>
-
           </FooterTab>
         </Footer>
       </Container>
@@ -137,4 +133,4 @@ class MyIndex extends Component {
   }
 }
 
-export default MyIndex;
+export default MyMap;

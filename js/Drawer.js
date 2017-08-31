@@ -6,6 +6,10 @@ import { DrawerNavigator } from "react-navigation";
 import Home from "./components/home/";
 import Header from "./components/Header/";
 import Anatomy from "./components/anatomy/";
+import MyIndex from "./components/anatomy/index";
+import MyMap from "./components/anatomy/map";
+import MyTask from "./components/anatomy/task";
+import MyTeam from "./components/anatomy/team";
 import Footer from "./components/footer/";
 import NHBadge from "./components/badge/";
 import NHButton from "./components/button/";
@@ -67,10 +71,15 @@ const DrawerExample = DrawerNavigator(
     NHTypography: { screen: NHTypography },
     Segment: { screen: Segment },
     Toast: { screen: Toast },
-    Actionsheet: { screen: Actionsheet }
+    Actionsheet: { screen: Actionsheet },
+
+    MyIndex: { screen: MyIndex },
+    MyMap: { screen: MyMap },
+    MyTask: { screen: MyTask },
+    MyTeam: { screen: MyTeam }
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: "Anatomy",
     contentOptions: {
       activeTintColor: "#e91e63"
     },

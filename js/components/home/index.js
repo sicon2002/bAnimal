@@ -26,7 +26,7 @@ class Home extends Component {
 							backgroundColor: "transparent",
 						}}
 					>
-						<H3 style={styles.text}>App to showcase</H3>
+						<H3 style={styles.text}>App to showcase...</H3>
 						<View style={{ marginTop: 8 }} />
 						<H3 style={styles.text}>NativeBase components</H3>
 						<View style={{ marginTop: 8 }} />
@@ -36,7 +36,7 @@ class Home extends Component {
 							style={{ backgroundColor: "#6FAF98", alignSelf: "center" }}
 							onPress={() => this.props.navigation.navigate("DrawerOpen")}
 						>
-							<Text>Lets Go!</Text>
+							<Text>进入bAnimal!</Text>
 						</Button>
 					</View>
 				</Image>
